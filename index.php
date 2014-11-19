@@ -86,7 +86,10 @@
 	</script>
 	<script type="text/javascript">
 		var marker;
-		var current_position = new google.maps.LatLng(<?php echo end($result)['latitud']; ?>, <?php echo end($result)['longitud']; ?>);
+		<?php 
+			$current = end($result);
+		?> 
+		var current_position = new google.maps.LatLng(<?php echo $current['latitud']; ?>, <?php echo $current['longitud']; ?>);
 		var map;
 		var route_coords;
 		var route;
